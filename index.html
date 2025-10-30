@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITTA - Pemesanan Bahan Ajar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="img/download.png" alt="Logo UT" class="logo">
+      <h1 class="header-title">Pemesanan Bahan Ajar</h1>
+    </div>
+    <button id="darkModeToggle"> Mode Gelap</button>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Tambah Mata Kuliah</h2>
+      <form id="formPemesanan">
+        <div class="form-group">
+          <label>Nama</label>
+          <input type="text" id="nama" required placeholder="Masukan Nama" />
+        </div>
+        <div class="form-group">
+          <label>NIM</label>
+          <input type="text" id="nim" required placeholder="Masukan NIM" />
+        </div>
+        <div class="form-group">
+          <label>Nama Mata Kuliah</label>
+          <input type="text" id="namaMK" required placeholder="Pemrograman Berbasis Web" />
+        </div>
+        <div class="form-group">
+          <label>Kode Mata Kuliah</label>
+          <input type="text" id="kodeMK" required placeholder="CT1632" />
+        </div>
+        <div class="form-group">
+          <label>Jumlah Buku</label>
+          <input type="number" id="jumlah" min="1" required />
+        </div>
+        <button type="submit" class="btn-add">+ Tambahkan Bahan Ajar</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2>Daftar Pesanan</h2>
+      <input type="text" id="searchInput" placeholder="Cari nama atau kode MK..." />
+      <table id="tablePesanan">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Nama MK</th>
+            <th>Kode MK</th>
+            <th>Jumlah</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="kirim" class="btn-submit"> Kirim Bahan Ajar</button>
+    </section>
+  </main>
+
+  <div id="modalBox" class="modal">
+    <div class="modal-content">
+      <p id="modalMessage"></p>
+      <button id="closeModal">Tutup</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Tugas 1 - Pemrograman Berbasis Web</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
